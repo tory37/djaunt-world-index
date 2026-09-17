@@ -63,49 +63,51 @@
     padding-bottom: var(--dj-space-3);
     border-bottom: var(--dj-border-width) solid var(--dj-border);
   }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: var(--dj-space-4);
-  }
-  .card {
-    background: var(--dj-surface);
-    border: var(--dj-border-width) solid var(--dj-border);
-    border-radius: var(--dj-radius-md);
-    padding: var(--dj-space-5);
+  .list {
     display: flex;
     flex-direction: column;
-    gap: var(--dj-space-3);
-    transition: border-color var(--dj-dur-base) var(--dj-ease);
   }
-  .card:hover {
-    border-color: var(--dj-accent-deep);
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--dj-space-2) var(--dj-space-6);
+    padding: var(--dj-space-5) 0;
+    border-bottom: var(--dj-border-width) solid var(--dj-border);
   }
-  .card h3 {
+  .row:first-child {
+    padding-top: 0;
+  }
+  .row-main {
+    flex: 1 1 380px;
+    min-width: 0;
+  }
+  .row h3 {
     font-family: var(--dj-font-display);
     font-weight: 600;
     font-size: var(--dj-text-lg);
-    margin: 0;
+    margin: 0 0 var(--dj-space-1);
     letter-spacing: var(--dj-tracking-display);
   }
+  .row p {
+    margin: 0;
+    color: var(--dj-text-muted);
+    font-size: var(--dj-text-sm);
+    max-width: 56ch;
+  }
   .links {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    gap: var(--dj-space-2);
+    gap: var(--dj-space-1);
   }
   .links a {
-    display: flex;
+    display: inline-flex;
     align-items: baseline;
-    gap: var(--dj-space-3);
+    gap: var(--dj-space-2);
     color: var(--dj-text);
     text-decoration: none;
     font-size: var(--dj-text-sm);
-    border-top: var(--dj-border-width) solid var(--dj-border);
-    padding-top: var(--dj-space-2);
-  }
-  .links a:first-child {
-    border-top: none;
-    padding-top: 0;
   }
   .links a:hover {
     color: var(--dj-accent-hi);
@@ -121,7 +123,7 @@
     letter-spacing: var(--dj-tracking-label);
     text-transform: uppercase;
     color: var(--dj-text-muted);
-    width: 5.5em;
+    width: 4.5em;
   }
   .url {
     overflow: hidden;
@@ -153,58 +155,79 @@
 
     <section>
       <h2>Djaunt Tools</h2>
-      <div class="grid">
+      <div class="list">
 
-        <article class="card">
-          <h3>Djaunt Branding</h3>
+        <article class="row">
+          <div class="row-main">
+            <h3>Djaunt Branding</h3>
+            <p>The brand's design system — logo, color tokens, type, and guidelines every Djaunt surface builds on.</p>
+          </div>
           <div class="links">
             <a href="https://tory37.github.io/djaunt-branding/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-branding</span></a>
             <a href="https://github.com/tory37/djaunt-branding"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-branding</span></a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>Mealeo</h3>
+        <article class="row">
+          <div class="row-main">
+            <h3>Mealeo</h3>
+            <p>Pantry, cookbook, and shopping list app, with Gemini-assisted macro estimates.</p>
+          </div>
           <div class="links">
             <a href="https://mealeo.vercel.app/"><span class="tag">Site</span><span class="url">mealeo.vercel.app</span></a>
             <a href="https://github.com/tory37/djaunt-cooking"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-cooking</span></a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>Djaunt Beans</h3>
+        <article class="row">
+          <div class="row-main">
+            <h3>Djaunt Beans</h3>
+            <p>A generalized, safe method for soaking, cooking, seasoning, and storing dried beans of any kind.</p>
+          </div>
           <div class="links">
             <a href="https://tory37.github.io/djaunt-bean-guide/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-bean-guide</span></a>
             <a href="https://github.com/tory37/djaunt-bean-guide"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-bean-guide</span></a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>Djaunt Cartoons</h3>
+        <article class="row">
+          <div class="row-main">
+            <h3>Djaunt Cartoons</h3>
+            <p>An eleven-lesson drawing curriculum, from rhythm and gesture through comics and digital tools.</p>
+          </div>
           <div class="links">
             <a href="https://tory37.github.io/cartoonist-drawing-curriculum/"><span class="tag">Site</span><span class="url">tory37.github.io/cartoonist-drawing-curriculum</span></a>
             <a href="https://github.com/tory37/cartoonist-drawing-curriculum"><span class="tag">GitHub</span><span class="url">github.com/tory37/cartoonist-drawing-curriculum</span></a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>Djaunt Dot Agents</h3>
+        <article class="row">
+          <div class="row-main">
+            <h3>Djaunt Dot Agents</h3>
+            <p>A portable AI agent setup — one script configures Claude Code, Gemini CLI, and Cursor CLI with a shared system prompt and skills.</p>
+          </div>
           <div class="links">
             <a href="https://tory37.github.io/djaunt-dot-agents"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-dot-agents</span></a>
             <a href="https://github.com/tory37/djaunt-dot-agents"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-dot-agents</span></a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>Djaunt Browser Tools</h3>
+        <article class="row">
+          <div class="row-main">
+            <h3>Djaunt Browser Tools</h3>
+            <p>Manifest V3 browser extensions for testing web apps — host swapping, query param tweaks, tab volume, forced dark mode.</p>
+          </div>
           <div class="links">
             <a href="https://tory37.github.io/djaunt-browser-tools/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-browser-tools</span></a>
             <a href="https://github.com/tory37/djaunt-browser-tools"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-browser-tools</span></a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>tory.dev</h3>
+        <article class="row">
+          <div class="row-main">
+            <h3>tory.dev</h3>
+            <p>Tory Hebert's resume site.</p>
+          </div>
           <div class="links">
             <a href="https://tory37.github.io/toryhdev"><span class="tag">Site</span><span class="url">tory37.github.io/toryhdev</span></a>
             <a href="https://github.com/tory37/toryhdev"><span class="tag">GitHub</span><span class="url">github.com/tory37/toryhdev</span></a>
