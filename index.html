@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-dj-theme="hoard">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Djaunt World</title>
+<meta name="description" content="Index of everything Djaunt: tools, sites, and repos.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/tokens.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--dj-bg);
+    color: var(--dj-text);
+    font-family: var(--dj-font-body);
+    line-height: var(--dj-leading-body);
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: var(--dj-space-8) var(--dj-space-4) var(--dj-space-9);
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: var(--dj-space-3);
+    margin-bottom: var(--dj-space-9);
+  }
+  header img {
+    height: 40px;
+    width: auto;
+  }
+  .eyebrow {
+    font-family: var(--dj-font-mono);
+    font-size: var(--dj-text-xs);
+    letter-spacing: var(--dj-tracking-label);
+    text-transform: uppercase;
+    color: var(--dj-accent);
+    margin: 0 0 var(--dj-space-2);
+  }
+  h1 {
+    font-family: var(--dj-font-display);
+    font-weight: 700;
+    letter-spacing: var(--dj-tracking-display);
+    font-size: var(--dj-text-4xl);
+    line-height: var(--dj-leading-tight);
+    margin: 0 0 var(--dj-space-3);
+  }
+  .lede {
+    color: var(--dj-text-muted);
+    max-width: 60ch;
+    margin: 0 0 var(--dj-space-8);
+    font-size: var(--dj-text-lg);
+  }
+  h2 {
+    font-family: var(--dj-font-display);
+    font-weight: 600;
+    letter-spacing: var(--dj-tracking-display);
+    font-size: var(--dj-text-xl);
+    margin: 0 0 var(--dj-space-5);
+    padding-bottom: var(--dj-space-3);
+    border-bottom: var(--dj-border-width) solid var(--dj-border);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--dj-space-4);
+  }
+  .card {
+    background: var(--dj-surface);
+    border: var(--dj-border-width) solid var(--dj-border);
+    border-radius: var(--dj-radius-md);
+    padding: var(--dj-space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--dj-space-3);
+    transition: border-color var(--dj-dur-base) var(--dj-ease);
+  }
+  .card:hover {
+    border-color: var(--dj-accent-deep);
+  }
+  .card h3 {
+    font-family: var(--dj-font-display);
+    font-weight: 600;
+    font-size: var(--dj-text-lg);
+    margin: 0;
+    letter-spacing: var(--dj-tracking-display);
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dj-space-2);
+  }
+  .links a {
+    display: flex;
+    align-items: baseline;
+    gap: var(--dj-space-3);
+    color: var(--dj-text);
+    text-decoration: none;
+    font-size: var(--dj-text-sm);
+    border-top: var(--dj-border-width) solid var(--dj-border);
+    padding-top: var(--dj-space-2);
+  }
+  .links a:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+  .links a:hover {
+    color: var(--dj-accent-hi);
+  }
+  .links a:focus-visible {
+    outline: none;
+    box-shadow: var(--dj-glow);
+  }
+  .tag {
+    flex-shrink: 0;
+    font-family: var(--dj-font-mono);
+    font-size: var(--dj-text-xs);
+    letter-spacing: var(--dj-tracking-label);
+    text-transform: uppercase;
+    color: var(--dj-text-muted);
+    width: 5.5em;
+  }
+  .url {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  footer {
+    margin-top: var(--dj-space-9);
+    padding-top: var(--dj-space-4);
+    border-top: var(--dj-border-width) solid var(--dj-border);
+    font-family: var(--dj-font-mono);
+    font-size: var(--dj-text-xs);
+    color: var(--dj-text-muted);
+    letter-spacing: var(--dj-tracking-label);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="assets/djaunt-lockup-gold.svg" alt="Djaunt">
+  </header>
+
+  <main>
+    <p class="eyebrow">Djaunt World</p>
+    <h1>Everything Djaunt, in one place.</h1>
+    <p class="lede">Music, software, and art under a single identity — an index of the sites, tools, and repos that make it up.</p>
+
+    <section>
+      <h2>Djaunt Tools</h2>
+      <div class="grid">
+
+        <article class="card">
+          <h3>Djaunt Branding</h3>
+          <div class="links">
+            <a href="https://tory37.github.io/djaunt-branding/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-branding</span></a>
+            <a href="https://github.com/tory37/djaunt-branding"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-branding</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Mealeo</h3>
+          <div class="links">
+            <a href="https://mealeo.vercel.app/"><span class="tag">Site</span><span class="url">mealeo.vercel.app</span></a>
+            <a href="https://github.com/tory37/djaunt-cooking"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-cooking</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Djaunt Beans</h3>
+          <div class="links">
+            <a href="https://tory37.github.io/djaunt-bean-guide/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-bean-guide</span></a>
+            <a href="https://github.com/tory37/djaunt-bean-guide"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-bean-guide</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Djaunt Cartoons</h3>
+          <div class="links">
+            <a href="https://tory37.github.io/cartoonist-drawing-curriculum/"><span class="tag">Site</span><span class="url">tory37.github.io/cartoonist-drawing-curriculum</span></a>
+            <a href="https://github.com/tory37/cartoonist-drawing-curriculum"><span class="tag">GitHub</span><span class="url">github.com/tory37/cartoonist-drawing-curriculum</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Djaunt Dot Agents</h3>
+          <div class="links">
+            <a href="https://tory37.github.io/djaunt-dot-agents"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-dot-agents</span></a>
+            <a href="https://github.com/tory37/djaunt-dot-agents"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-dot-agents</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Djaunt Browser Tools</h3>
+          <div class="links">
+            <a href="https://tory37.github.io/djaunt-browser-tools/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-browser-tools</span></a>
+            <a href="https://github.com/tory37/djaunt-browser-tools"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-browser-tools</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>tory.dev</h3>
+          <div class="links">
+            <a href="https://tory37.github.io/toryhdev"><span class="tag">Site</span><span class="url">tory37.github.io/toryhdev</span></a>
+            <a href="https://github.com/tory37/toryhdev"><span class="tag">GitHub</span><span class="url">github.com/tory37/toryhdev</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer>Djaunt · brand guidelines at github.com/tory37/djaunt-branding</footer>
+  </main>
+</div>
+</body>
+</html>
