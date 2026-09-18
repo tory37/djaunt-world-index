@@ -66,6 +66,54 @@
     padding-bottom: var(--dj-space-3);
     border-bottom: var(--dj-border-width) solid var(--dj-border);
   }
+  .featured {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--dj-space-4);
+    background: var(--dj-surface);
+    border-left: 2px solid var(--dj-accent);
+    border-radius: var(--dj-radius-sm);
+    padding: var(--dj-space-5) var(--dj-space-6);
+    margin-bottom: var(--dj-space-9);
+  }
+  .featured-main {
+    display: flex;
+    align-items: center;
+    gap: var(--dj-space-3);
+  }
+  .featured h3 {
+    font-family: var(--dj-font-display);
+    font-weight: 600;
+    font-size: var(--dj-text-lg);
+    margin: 0 0 var(--dj-space-1);
+    letter-spacing: var(--dj-tracking-display);
+  }
+  .featured p {
+    margin: 0;
+    color: var(--dj-text-muted);
+    font-size: var(--dj-text-sm);
+  }
+  .cta {
+    flex-shrink: 0;
+    font-family: var(--dj-font-mono);
+    font-size: var(--dj-text-sm);
+    letter-spacing: var(--dj-tracking-label);
+    text-transform: uppercase;
+    color: var(--dj-accent-hi);
+    text-decoration: none;
+  }
+  .cta:hover {
+    text-decoration: underline;
+  }
+  .cta:focus-visible {
+    outline: none;
+    box-shadow: var(--dj-glow);
+  }
+  section + section {
+    margin-top: var(--dj-space-8);
+  }
   .list {
     display: flex;
     flex-direction: column;
@@ -167,23 +215,21 @@
     <h1>Everything Djaunt, in one place.</h1>
     <p class="lede">Music, software, and art under a single identity — an index of the sites, tools, and repos that make it up.</p>
 
-    <section>
-      <h2>Djaunt Tools</h2>
-      <div class="list">
+    <section class="featured">
+      <div class="featured-main">
+        <img class="row-icon" src="assets/icons/torydev.svg" alt="" width="36" height="36">
+        <div>
+          <p class="eyebrow">Made by</p>
+          <h3>Tory Hebert</h3>
+          <p>The person behind Djaunt. Background, work history, contact.</p>
+        </div>
+      </div>
+      <a class="cta" href="https://tory37.github.io/toryhdev">See the resume &rarr;</a>
+    </section>
 
-        <article class="row">
-          <div class="row-main">
-            <img class="row-icon" src="assets/icons/branding.svg" alt="" width="36" height="36">
-            <div class="row-text">
-              <h3>Djaunt Branding</h3>
-              <p>The brand's design system — logo, color tokens, type, and guidelines every Djaunt surface builds on.</p>
-            </div>
-          </div>
-          <div class="links">
-            <a href="https://tory37.github.io/djaunt-branding/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-branding</span></a>
-            <a href="https://github.com/tory37/djaunt-branding"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-branding</span></a>
-          </div>
-        </article>
+    <section>
+      <h2>Apps</h2>
+      <div class="list">
 
         <article class="row">
           <div class="row-main">
@@ -198,6 +244,13 @@
             <a href="https://github.com/tory37/djaunt-cooking"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-cooking</span></a>
           </div>
         </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Guides</h2>
+      <div class="list">
 
         <article class="row">
           <div class="row-main">
@@ -227,6 +280,27 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <section>
+      <h2>Tools</h2>
+      <div class="list">
+
+        <article class="row">
+          <div class="row-main">
+            <img class="row-icon" src="assets/icons/branding.svg" alt="" width="36" height="36">
+            <div class="row-text">
+              <h3>Djaunt Branding</h3>
+              <p>The brand's design system — logo, color tokens, type, and guidelines every Djaunt surface builds on.</p>
+            </div>
+          </div>
+          <div class="links">
+            <a href="https://tory37.github.io/djaunt-branding/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-branding</span></a>
+            <a href="https://github.com/tory37/djaunt-branding"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-branding</span></a>
+          </div>
+        </article>
+
         <article class="row">
           <div class="row-main">
             <img class="row-icon" src="assets/icons/agents.svg" alt="" width="36" height="36">
@@ -252,20 +326,6 @@
           <div class="links">
             <a href="https://tory37.github.io/djaunt-browser-tools/"><span class="tag">Site</span><span class="url">tory37.github.io/djaunt-browser-tools</span></a>
             <a href="https://github.com/tory37/djaunt-browser-tools"><span class="tag">GitHub</span><span class="url">github.com/tory37/djaunt-browser-tools</span></a>
-          </div>
-        </article>
-
-        <article class="row">
-          <div class="row-main">
-            <img class="row-icon" src="assets/icons/torydev.svg" alt="" width="36" height="36">
-            <div class="row-text">
-              <h3>tory.dev</h3>
-              <p>Tory Hebert's resume site.</p>
-            </div>
-          </div>
-          <div class="links">
-            <a href="https://tory37.github.io/toryhdev"><span class="tag">Site</span><span class="url">tory37.github.io/toryhdev</span></a>
-            <a href="https://github.com/tory37/toryhdev"><span class="tag">GitHub</span><span class="url">github.com/tory37/toryhdev</span></a>
           </div>
         </article>
 
